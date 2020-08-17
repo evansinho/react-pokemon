@@ -3,7 +3,7 @@ import PokemonList from '../container/PokemonList';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <h1>hello world</h1>
       <PokemonList />
     </div>

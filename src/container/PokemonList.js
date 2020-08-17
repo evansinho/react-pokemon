@@ -13,7 +13,7 @@ const PokemonList = ({ getPokemons, pokemons }) => {
   return (
     <div>
       {pokemons.map(pokemon => (
-        <Pokemon key={pokemon.name} pokemon={pokemon} />
+        <Pokemon key={pokemon.id} pokemon={pokemon} />
       ))}
     </div>
   );
