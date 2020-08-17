@@ -1,0 +1,11 @@
+.container h1 {
+  color: yellow;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  padding-top: 1rem;
+}
