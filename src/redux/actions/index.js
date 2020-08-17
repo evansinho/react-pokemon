@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import axios from 'axios';
-import { GET_POKEMONS } from '../constants/actionTypes';
+import { GET_POKEMONS, GET_POKEMON } from '../constants/actionTypes';
 
 export const getPokemons = () => async dispatch => {
   try {
@@ -19,3 +19,14 @@ export const getPokemons = () => async dispatch => {
 };
 
 // https://pokeres.bastionbot.org/images/pokemon/2.png;
+export const getPokemon = id => async dispatch => {
+  try {
+    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    dispatch({
+      type: GET_POKEMON,
+      payload: res.data,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};

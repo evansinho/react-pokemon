@@ -1,4 +1,4 @@
-import { GET_POKEMONS } from '../constants/actionTypes';
+import { GET_POKEMONS, GET_POKEMON } from '../constants/actionTypes';
 
 const initialState = {
   pokemons: [],
@@ -10,6 +10,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         pokemons: action.payload,
+      };
+    case GET_POKEMON:
+      return {
+        ...state,
+        pokemon: action.payload,
       };
     default:
       return state;
