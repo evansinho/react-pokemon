@@ -2,6 +2,7 @@ import { GET_POKEMONS, GET_POKEMON } from '../constants/actionTypes';
 
 const initialState = {
   pokemons: [],
+  pokemon: {},
 };
 
 export default function (state = initialState, action) {

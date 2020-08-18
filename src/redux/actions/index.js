@@ -4,7 +4,7 @@ import { GET_POKEMONS, GET_POKEMON } from '../constants/actionTypes';
 
 export const getPokemons = () => async dispatch => {
   try {
-    const allPokemon = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100');
+    const allPokemon = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20');
     const pokemonData = await Promise.all(allPokemon.data.results.map(async pokemon => {
       const pokemonRecord = await axios.get(pokemon.url);
       return pokemonRecord.data;

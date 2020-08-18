@@ -8,7 +8,8 @@ import Pokemon from '../components/Pokemon';
 const PokemonList = ({ getPokemons, pokemons }) => {
   useEffect(() => {
     getPokemons();
-  });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div>
