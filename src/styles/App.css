@@ -4,8 +4,8 @@
 
 .nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
   padding-top: 1rem;
 }

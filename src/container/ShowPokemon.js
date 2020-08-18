@@ -11,8 +11,29 @@ const ShowPokemon = ({ getPokemon, pokemon, match }) => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div>
-      <h1>{pokemon.id}</h1>
+    <div className="row">
+      <div className="col-md-6">
+        <h2>{pokemon.name}</h2>
+        <img src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="img" style={{ width: '25rem' }} />
+      </div>
+      <div className="col-md-6 card">
+        <div className="height">
+          <h3>HEIGHT</h3>
+          <p>{pokemon.height}</p>
+        </div>
+        <div className="weight">
+          <h3>WEIGHT</h3>
+          <p>{pokemon.weight}</p>
+        </div>
+        <div className="experience">
+          <h3>XP</h3>
+          <p>{pokemon.base_experience}</p>
+        </div>
+        {/* <div className="abilities">
+          <h3>ABILITIES</h3>
+          {pokemon.abilities.map(ab => <span key={ab.ability.name} className="abilities">{ab.ability.name}</span>)}
+        </div> */}
+      </div>
     </div>
   );
 };

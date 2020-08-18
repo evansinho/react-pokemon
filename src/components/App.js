@@ -11,11 +11,10 @@ function App() {
       <div className="container">
         <div className="nav">
           <h1>POKEDEX</h1>
-          <input type="text" placeholder="SEARCH" />
         </div>
         <Switch>
           <Route exact path="/" component={PokemonList} />
-          <Route exact path="/pokemon/:id" component={ShowPokemon} />
+          <Route exact path="/:id" component={ShowPokemon} />
         </Switch>
       </div>
     </Router>
