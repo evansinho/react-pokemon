@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getPokemon } from '../redux/actions';
+import '../styles/ShowPokemon.css';
 
 const ShowPokemon = ({ getPokemon, pokemon: { pokemon, loading }, match }) => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const ShowPokemon = ({ getPokemon, pokemon: { pokemon, loading }, match }) => {
         <h2>{pokemon.name}</h2>
         <img src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="img" style={{ width: '25rem' }} />
       </div>
-      <div className="col-md-6 card">
+      <div className="col-md-6 card poke-card" style={{ width: '35rem' }}>
         <div className="height">
           <h3>HEIGHT</h3>
           <p>{pokemon.height}</p>
@@ -29,10 +30,14 @@ const ShowPokemon = ({ getPokemon, pokemon: { pokemon, loading }, match }) => {
           <h3>XP</h3>
           <p>{pokemon.base_experience}</p>
         </div>
-        {/* <div className="abilities">
+        <div className="abilities">
           <h3>ABILITIES</h3>
-          {pokemon.abilities.map(ab => <span key={ab.ability.name} className="abilities">{ab.ability.name}</span>)}
-        </div> */}
+          {/* {pokemon.abilities.map(ability => <span key={ability.ability.name} className="abilities">{ability.ability.name}</span>)} */}
+        </div>
+        <div className="type">
+          <h3>Type</h3>
+          {/* {pokemon.types.map(type => <span key={type.type.name}>{type.type.name}</span>) } */}
+        </div>
       </div>
     </div>
   );
