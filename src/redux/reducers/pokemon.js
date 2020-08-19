@@ -3,6 +3,7 @@ import { GET_POKEMONS, GET_POKEMON } from '../constants/actionTypes';
 const initialState = {
   pokemons: [],
   pokemon: {},
+  loading: true,
 };
 
 export default function (state = initialState, action) {
@@ -11,11 +12,13 @@ export default function (state = initialState, action) {
       return {
         ...state,
         pokemons: action.payload,
+        loading: false,
       };
     case GET_POKEMON:
       return {
         ...state,
         pokemon: action.payload,
+        loading: false,
       };
     default:
       return state;

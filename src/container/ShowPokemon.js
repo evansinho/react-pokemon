@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getPokemon } from '../redux/actions';
 
-const ShowPokemon = ({ getPokemon, pokemon, match }) => {
+const ShowPokemon = ({ getPokemon, pokemon: { pokemon, loading }, match }) => {
   useEffect(() => {
     const { id } = match.params;
     getPokemon(id);
     // eslint-disable-next-line
   }, []);
-  return (
+  return pokemon && loading === null ? <h1>loading...</h1> : (
     <div className="row">
       <div className="col-md-6">
         <h2>{pokemon.name}</h2>
@@ -44,7 +44,7 @@ ShowPokemon.propTypes = {
 };
 
 const mapStateToProp = state => ({
-  pokemon: state.pokemon.pokemon,
+  pokemon: state.pokemon,
 });
 
 export default connect(mapStateToProp, { getPokemon })(ShowPokemon);

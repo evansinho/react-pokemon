@@ -28,7 +28,7 @@ const PokemonList = ({
     return false;
   }));
 
-  return (
+  return pokemons === null ? <h1>Loading....</h1> : (
     <div>
       <CategoryFilter handleChange={handleFilterChange} />
       {filteredPokemons().map(pokemon => (
@@ -43,7 +43,6 @@ PokemonList.propTypes = {
   getPokemons: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
   changeFilter: PropTypes.func.isRequired,
-
 };
 
 const mapStateToProps = state => ({
