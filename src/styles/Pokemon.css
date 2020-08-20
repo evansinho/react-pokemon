@@ -1,11 +1,11 @@
 .pokemon-card {
   border: 1px solid yellow;
-  overflow: hidden; 
+  overflow: hidden;
   cursor: pointer;
 }
 
 .pokemon-card:hover{
-  
+
 }
 
 .pokemon-card p {
