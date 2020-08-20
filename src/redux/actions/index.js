@@ -14,7 +14,9 @@ export const getPokemons = () => async dispatch => {
       payload: pokemonData,
     });
   } catch (err) {
-    console.log(err);
+    dispatch({
+      err,
+    });
   }
 };
 
@@ -26,7 +28,9 @@ export const getPokemon = id => async dispatch => {
       payload: res.data,
     });
   } catch (err) {
-    console.log(err);
+    dispatch({
+      err,
+    });
   }
 };
 
