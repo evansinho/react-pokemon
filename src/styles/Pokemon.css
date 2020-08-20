@@ -4,10 +4,6 @@
   cursor: pointer;
 }
 
-.pokemon-card:hover{
-
-}
-
 .pokemon-card p {
   color: red;
 }

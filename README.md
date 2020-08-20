@@ -8,7 +8,7 @@ Pokemon is a React web application where you can navigate the details of the dif
 [Pokemon app](https://react-pokedom.netlify.app/)
 
 ## Video Presentation
-[video](https://www.loom.com/share/358e3e29cc244f98afb2eaa479ac36e1)
+(https://www.loom.com/share/358e3e29cc244f98afb2eaa479ac36e1)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
