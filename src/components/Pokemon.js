@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -12,13 +11,16 @@ const Pokemon = ({ pokemon }) => (
         #
         {pokemon.id}
       </p>
-      <h5>{pokemon.name}</h5>
+      <h5 className="name">{pokemon.name}</h5>
     </Link>
   </div>
 );
 
 Pokemon.propTypes = {
-  pokemon: PropTypes.shape({}).isRequired,
+  pokemon: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+  }).isRequired,
 };
 
 export default Pokemon;
