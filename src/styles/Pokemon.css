@@ -1,0 +1,14 @@
+.pokemon-card {
+  border: 1px solid yellow;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pokemon-card p {
+  color: red;
+}
+
+.pokemon-card h5 {
+  color: red;
+  text-transform: uppercase;
+}
